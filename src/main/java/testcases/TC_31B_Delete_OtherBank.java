@@ -21,7 +21,7 @@ public class TC_31B_Delete_OtherBank  extends ProjectWrapp {
 		dataSheetName="AjmanCIBPom";
 		category="Sanity";
 		authors="Sreejith";
-		testKeyword="TC31";
+		testKeyword="TC31B";
 		LogoutStatus=true;
 		usertype="CIBUser";
 
@@ -29,7 +29,10 @@ public class TC_31B_Delete_OtherBank  extends ProjectWrapp {
 
 	@Test(groups={"sanity"},dataProvider="fetch")
 
-	public void createBeneficiaryLocalTransfer(String casename,String GroupID ,String Username,String Password,String Otp,String corp,String name,String email,String phoneno,String country,String city,String paymentType,String accno,String currency,String translimit,String dailylimit,String Monthlylimit,String initiator,String sourceacc,String auth1,String auth2) throws Exception{
+	public void createBeneficiaryLocalTransfer(String casename,String GroupID ,
+			String Username,String Password,String Otp,String beneficiaryname,
+			String auth1,String auth2,
+			String phoneno,String country,String city,String paymentType,String accno,String currency,String translimit,String dailylimit,String Monthlylimit,String initiator,String sourceacc,String data,String datas) throws Exception{
 
 try{
 	new	Ajman_HomePage(driver,test)
@@ -44,13 +47,12 @@ try{
 
 .clickpaymentMenu()
 .clickvendor()
-.clickBeneficiaryMenu()
-.addbeneficiarylink()
+.clickvendorMaintain()
 
-.FillBeneDetails(corp ,name, email, phoneno, country, city)
-.FillBeneForm(paymentType, name, accno, currency, translimit, dailylimit, Monthlylimit,initiator,sourceacc)
 
-//.clickPaymentDownloadbutton()
+.deleteBeneficiary(beneficiaryname)
+
+
 .otphandlingNavigationPayDATELINE()
 .clickDatelinemenu()
 .Filterdateline("paymentdd.selecttype.xpath","Vendor Management Request","payment.status.xpath","Pending", getrefnumer,"Pending")
@@ -80,13 +82,14 @@ new	Ajman_HomePage(driver,test)
 .authorizationfromDateline()
 
 .datelinefilter("paymentdd.selecttype.xpath","Vendor Management Request","payment.status.xpath","Accepted", getrefnumer, "Accepted")
+
+
 .navigatevendorPaymentspage()
 
 .clickvendor()
-.clickBeneficiaryMenu()
-//.addBeneficiaryFilter(CorpValue,TransferValue)
 
-.verifyBeneficiarycpresent(name)
+.clickvendorMaintain()
+.deleteBeneficiaryaccNotpresent(beneficiaryname)
 .logout(LogoutStatus,usertype);
 
 }

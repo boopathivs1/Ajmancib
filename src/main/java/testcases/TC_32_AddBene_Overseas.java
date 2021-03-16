@@ -21,7 +21,7 @@ public class TC_32_AddBene_Overseas  extends ProjectWrapp {
 		dataSheetName="AjmanCIBPom";
 		category="Sanity";
 		authors="Sreejith";
-		testKeyword="TC31";
+		testKeyword="TC32";
 		LogoutStatus=true;
 		usertype="CIBUser";
 
