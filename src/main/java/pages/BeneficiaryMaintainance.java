@@ -96,7 +96,8 @@ public BeneficiaryMaintainance verifyelementBeneficiaryNot(String accno) throws 
 
 return this;
 }
-public OtP_Page deleteBeneficiary(String accno) throws InterruptedException{
+public OtP_Page deleteBeneficiary(String beneficiaryname
+) throws InterruptedException{
 
 	
 	for(int i=1;i<10;i++){
@@ -109,10 +110,10 @@ public OtP_Page deleteBeneficiary(String accno) throws InterruptedException{
 		}
 Thread.sleep(4000);
 //boolean a=VerifyElementpresentreturn(".//h4[text()='Localbenee']");
-boolean a=driver.getPageSource().contains(accno);
+boolean a=driver.getPageSource().contains(beneficiaryname);
 
 if(a){
-	clickByXpathExplict(".//h4[text()='"+accno+"']//following::button[@id='delete-vendor'][1]");
+	clickByXpathExplict(".//h4[.='"+beneficiaryname+"']//following::button[@id='delete-vendor']");
 	clickByXpathExplict(".//button[@id='delete']");
 break;
 }
