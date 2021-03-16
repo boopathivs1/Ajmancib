@@ -31,7 +31,7 @@ public class TC_32_AddBene_Overseas  extends ProjectWrapp {
 
 	public void createBeneficiaryLocalTransfer(String casename,String GroupID ,String Username,String Password,String Otp,String corp,String name,String email,String phoneno,String country,String city,String paymentType,String accno,String currency,String translimit,String dailylimit,String Monthlylimit,String initiator,String sourceacc,String auth1,String auth2) throws Exception{
 
-try{
+		try{
 	new	Ajman_HomePage(driver,test)
 	.enterGroupID(GroupID)
 	.enterUsernameID(Username)
@@ -48,7 +48,7 @@ try{
 .addbeneficiarylink()
 
 .FillBeneDetails(corp ,name, email, phoneno, country, city)
-.FillBeneForm(paymentType, name, accno, currency, translimit, dailylimit, Monthlylimit,initiator,sourceacc)
+.FillInternationalBeneForm(paymentType, name, accno, country, city,currency,translimit, dailylimit, Monthlylimit, initiator, sourceacc)
 
 //.clickPaymentDownloadbutton()
 .otphandlingNavigationPayDATELINE()

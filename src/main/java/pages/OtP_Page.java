@@ -70,7 +70,38 @@ Thread.sleep(3000);
 		return this;
 			}
 
+			public OtP_Page FillInternationalBeneForm(String paymentType,String name,String accno,String country,String city,String currency,String translimit,String dailylimit,String Monthlylimit,String initiator,String sourceacc) throws InterruptedException{
+				Thread.sleep(3000);
 			
+		clickByXpathExplict(prop.getProperty("click.addnewVendor.xpath"));
+		dropdownSelection(prop.getProperty("select.dropdown.xpath"),paymentType);
+		enterByXpathExplict(prop.getProperty("enter.nickname.xpath"),name);
+		enterByXpathExplict(prop.getProperty("enter.accnumber.xpath"),accno);
+		enterByXpathExplict(prop.getProperty("enter.confirm.accno.xpath"),accno);
+		
+		dropdownSelection(prop.getProperty("click.bene.international.country.xpath"),"Afghanistan");
+		enterByXpathExplict(prop.getProperty("click.inter.city.xpath"),"daman");
+		enterByXpathExplict(prop.getProperty("enter.bank.detail.xpath"),"indian bank");
+		enterByXpathExplict(prop.getProperty("enter.address.xpath"),"abc colony");
+		clickByXpathExplict(prop.getProperty("click.save.button.xpath"));
+	
+Thread.sleep(3000);
+		dropdownSelection(prop.getProperty("select.currency.dropdown.xpath"),currency);
+		pageScroll();
+		enterByXpathExplict(prop.getProperty("enter.transactionlimit.xpath"),translimit);
+		enterByXpathExplict(prop.getProperty("enter.daily.limit.xpath"),dailylimit);
+		enterByXpathExplict(prop.getProperty("enter.monthly.limit.xpath"),Monthlylimit);
+		clickByXpathExplict(prop.getProperty("click.calendaricon.xpath"));
+		clickByXpathExplict(prop.getProperty("clicktoday.reports.button.xpath"));
+		dropdownSelection(prop.getProperty("select.initiator.dropdown.xpath"),initiator);
+		dropdownSelection(prop.getProperty("select.bene.account.dropdown.xpath"),sourceacc);
+		clickByXpathExplict(prop.getProperty("click.bene.save.btn.xpath"));
+
+		//Boolean a=VerifyElementpresentreturn(prop.getProperty("beneficiary.error.xpath"));
+		//booleanResult(a, "Account number has exists already");	
+		return this;
+			}
+
 			
 			public Ajman_Dashboard submitTokenXpath(String token) throws InterruptedException{
 //				enterByXpathExplict(prop.getProperty("Enter.token.xpath"),token);

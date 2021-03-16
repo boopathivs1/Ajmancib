@@ -53,7 +53,7 @@ public class TC_29_Own_account_Pay_Now  extends ProjectWrapp {
 .fillOtp("OwnAccountOtpSubmit")
 .verifysucessmsg()
 .clickPayment_Report_link()
-.OwnPaymentStatusCheck(prop.getProperty("own.acc.payreports.xpath"), "Pending Authorization","Pending Authorization","Today")
+.OwnPaymentStatusCheck(prop.getProperty("own.acc.payreports.xpath"), "Pending Authorization","Pending Authorization","Tomorrow")
 
 .logout(true,usertype);
 
@@ -79,7 +79,7 @@ new	Ajman_HomePage(driver,test)
 
 //.OwnPaymentStatus(prop.getProperty("own.acc.payreports.xpath"), "Success","Success","Today")
 
-.OwnPaymentStatusCheck(prop.getProperty("own.acc.payreports.xpath"),"Success","Success","Today")
+.OwnPaymentStatusCheck(prop.getProperty("own.acc.payreports.xpath"),"Success","Success","Tomorrow")
 
 
 .navigateStatementpage()
