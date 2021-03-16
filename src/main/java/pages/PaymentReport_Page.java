@@ -28,6 +28,71 @@ public class PaymentReport_Page  extends ProjectWrapp{
 		
 	}
 	
+	
+	public Ajman_Dashboard BillPaymentStatusCheck(String RequestType,String RequestStatusValue,String status,String day) throws InterruptedException{
+		locateFrame("icanvas");
+		clickByXpathExplict(prop.getProperty("click.calendar.iconone.xpath"));
+		Thread.sleep(3000);
+		clickByXpathExplict(prop.getProperty("click.todaycalo.xpath"));
+		Thread.sleep(3000);
+		
+		clickByXpathExplict(prop.getProperty("click.secclandar.icon.xpath"));
+		
+		if(day=="Today")
+		{
+	//clickByXpathExplict(prop.getProperty("click.day.ownacc.payreport.xpath"));
+			clickByXpathExplict(prop.getProperty("click.today.payreport.xpath"));
+
+
+		}
+				else if (day=="Tomorrow") {
+			Thread.sleep(3000);
+
+			//clickByXpathExplict(prop.getProperty("click.day.ownacc.payreport.xpath"));
+			
+			clickByXpathExplict(prop.getProperty("click.billpayyear.xpath"));
+			clickByXpathExplict(prop.getProperty("select.calendar.month.xpath"));
+			clickByXpathExplict(prop.getProperty("select.calendar.days.xpath"));
+			
+			//clickByXpathExplict(prop.getProperty("click.day.ownacc.payreport.xpath"));
+
+		//	Thread.sleep(3000);
+//				clickByXpathExplict(prop.getProperty("select.calendar.month.xpath"));
+	Thread.sleep(3000);
+	//clickByXpathExplict(prop.getProperty("select.calendar.to.days.xpath"));
+					}
+		clickByXpathExplict(prop.getProperty("paymentreport.morebutton.xpath"));
+//		Thread.sleep(6000);
+		dropdownSelection(".//div[@id='sadadPaymentType_chosen']",RequestType);
+	//Thread.sleep(6000);
+	dropdownSelection(".//div[@id='status_chosen']",RequestStatusValue);
+		
+//		Thread.sleep(6000);
+		clickByXpathExplict(prop.getProperty("click.filter.button.req.xpath"));
+	//getrefnumer="OWN19672";
+		
+	//Thread.sleep(8000);
+	pageScroll400();
+	//enable
+	//Thread.sleep(6000);
+
+
+	//enable below case if working
+
+	verifyTextlistcontainXpath(".//table[@id='data']//tr//td[8]",getrefnumer);
+	Thread.sleep(2000);
+	scrolltoelementJs(".//table[@id='data']//tr//td[contains(text(),'"+RequestStatusValue+"')]");
+	//Thread.sleep(6000);
+	verifyTextMatchlistByXpath(".//table[@id='data']//tr//td[contains(text(),'"+RequestStatusValue+"')]",status);
+
+	defaultcontent();
+		return new Ajman_Dashboard(driver, test);
+			}
+
+
+	
+
+	
 public PaymentReport_Page verifyPaymentStatus(String fromdate,String todate,String status1,String status2) throws InterruptedException{
 	locateFrame("icanvas");
 enterByXpathExplict(prop.getProperty("enter.fromdate.paymentreport.xpath"),fromdate);
