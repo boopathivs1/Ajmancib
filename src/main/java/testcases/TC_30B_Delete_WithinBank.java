@@ -14,7 +14,7 @@ import wrappers.ProjectWrapp;
 public class TC_30B_Delete_WithinBank  extends ProjectWrapp {
 	@BeforeClass(groups={"common"})
 	public void setDatag() {
-		testCaseName="TC_30B_Delete Beneficiary";
+		testCaseName="TC_30B_Delete_WithinBank_Beneficiary";
 
 		testDescription="Delete Beneficiary - Within Beneficiary";
 		browserName="Chrome";
