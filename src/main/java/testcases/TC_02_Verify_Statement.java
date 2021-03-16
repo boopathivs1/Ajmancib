@@ -13,7 +13,7 @@ public class TC_02_Verify_Statement  extends ProjectWrapp {
 	@BeforeClass(groups={"common"})
 	public void setDatag() {
 		testCaseName="TC02-Verify_Statement";
-		testDescription="Verifying MIni,Current and Previous Statement";
+		testDescription="Account Statement - Mini statement,Curent statement,Previous statement";
 		browserName="Chrome";
 		dataSheetName="AjmanCIBPom";
 		category="Regression";

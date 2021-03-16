@@ -13,7 +13,7 @@ public class TC_01_Account_Summary  extends ProjectWrapp {
 	@BeforeClass(groups={"common"})
 	public void setDatag() {
 		testCaseName="TC01-Account Summary";
-		testDescription="Checking Summary of account details in Summary Page";
+		testDescription="Login,Account Summary - Dashboard Account Summary verify,Account Summary";
 		browserName="Chrome";
 		dataSheetName="AjmanCIBPom";
 		category="Regression";

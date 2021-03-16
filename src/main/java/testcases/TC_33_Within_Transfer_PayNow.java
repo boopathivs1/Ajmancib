@@ -14,7 +14,7 @@ import wrappers.ProjectWrapp;
 public class TC_33_Within_Transfer_PayNow  extends ProjectWrapp {
 	@BeforeClass(groups={"common"})
 	public void setDatag() {
-		testCaseName="TC29 Within_Transfer_PayNow";
+		testCaseName="TC33 Within_Transfer_PayNow";
 
 		testDescription="Within_Transfer_PayNow";
 		browserName="Chrome";
