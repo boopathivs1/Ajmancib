@@ -47,6 +47,24 @@
 
 
       <class name="testcases.TC_31B_Delete_OtherBank"/>
+       <class name="testcases.TC_31_AddBene_OtherBank"/>
+             <class name="testcases.TC_31B_Delete_OtherBank"/>
+        <class name="testcases.TC_32_AddBene_Overseas"/>
+         <class name="testcases.TC_32B_Delete_Overseas"/>
+      <class name="testcases.TC_33_Within_Transfer_PayNow"/>
+      <class name="testcases.TC_34_Within_Transfer_PayLater"/>
+      <class name="testcases.TC_35_Within_Transfer_Repeat"/>
+        <class name="testcases.TC_36_Other_Transfer_PayNow"/>
+      <class name="testcases.TC_37_Other_Transfer_PayLater"/>
+       <class name="testcases.TC_38_Other_Transfer_Repeat"/>
+        <class name="testcases.TC_40_Overseas_Transfer_PayNow"/>
+      <class name="testcases.TC_41_Overseas_Transfer_PayLater"/>
+    
+      <class name="testcases.TC_42_Overseas_Transfer_Repeat"/>
+     <class name="testcases.TC_43_Verify_SI_History"/>
+     <class name="testcases.TC_46_Non_WPS_Payment"/>
+ <class name="testcases.TC_48_Verify_Payment_Reports"/>
+      <class name="testcases.TC_56_ProfileView"/>
 
 
 
