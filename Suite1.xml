@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test name="Testsss" thread-count="1" parallel="classes">
+ 
+<classes>
+      <class name="testcases.TC_01_Account_Summary"/>
+      <class name="testcases.TC_02_Verify_Statement"/>
+      <class name="testcases.TC_03_LastThreeMonth"/>
+
+      <class name="testcases.TC_04_Account_Statement_MoreOption"/>
+      <class name="testcases.TC_06_Account_Detail"/>
+
+      <class name="testcases.TC_07_Consolidated_Statement"/>
+
+      <class name="testcases.TC_08_ChequeBook_Request"/>
+      <class name="testcases.TC_09_Verify_Balance_Cerificate_Request"/>
+      <class name="testcases.TC_10_Verify_Liability_Cerificate_Request"/>
+
+      <class name="testcases.TC_12_13_Loan_Dashboard_Summary"/>
+
+      <class name="testcases.TC_14_Loan_Statement"/>
+
+      <class name="testcases.TC_15_Loan_Repay_Statement"/>
+
+      <class name="testcases.TC_16_Verify_Loan_Details"/>
+      <class name="testcases.TC_22_One_Time_Payment"/>
+      <class name="testcases.TC_23_Ajman_ADD_Biller"/>
+
+      <class name="testcases.TC_24_Ajman_Edit_Biller"/>
+
+      <class name="testcases.TC_25_Ajman_Delete_Biller"/>
+
+      <class name="testcases.TC_26_BillPayment_singlebill"/>
+
+      <class name="testcases.TC_27_Billpayment_Multiplebill"/>
+
+
+      <class name="testcases.TC_28_Verify_BillPayment_report"/>
+
+      <class name="testcases.TC_29_Own_account_Pay_Now"/>
+      <class name="testcases.TC_30_AddBene_WithinBank"/>
+
+      <class name="testcases.TC_30B_Delete_WithinBank"/>
+
+      <class name="testcases.TC_31_AddBene_OtherBank"/>
+
+
+      <class name="testcases.TC_31B_Delete_OtherBank"/>
+
+
+
+
+
+
+
+  
+  
+  
+  
+  </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
