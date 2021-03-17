@@ -85,7 +85,7 @@ new	Ajman_HomePage(driver,test)
 .clickvendor()
 .clickBeneficiaryMenu()
 //.addBeneficiaryFilter(CorpValue,TransferValue)
-.clickPayeeCode()
+
 .verifyBeneficiarycpresent(name)
 .logout(LogoutStatus,usertype);
 

@@ -4,7 +4,8 @@
   <test name="Testsss" thread-count="1" parallel="classes">
  
 <classes>
-      <class name="testcases.TC_01_Account_Summary"/>
+
+        <class name="testcases.TC_01_Account_Summary"/>
       <class name="testcases.TC_02_Verify_Statement"/>
       <class name="testcases.TC_03_LastThreeMonth"/>
 
@@ -43,10 +44,6 @@
 
       <class name="testcases.TC_30B_Delete_WithinBank"/>
 
-      <class name="testcases.TC_31_AddBene_OtherBank"/>
-
-
-      <class name="testcases.TC_31B_Delete_OtherBank"/>
        <class name="testcases.TC_31_AddBene_OtherBank"/>
              <class name="testcases.TC_31B_Delete_OtherBank"/>
         <class name="testcases.TC_32_AddBene_Overseas"/>
@@ -71,11 +68,7 @@
 
 
 
-
-  
-  
-  
-  
+     
   </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
