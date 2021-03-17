@@ -78,15 +78,19 @@ Thread.sleep(3000);
 		enterByXpathExplict(prop.getProperty("enter.nickname.xpath"),name);
 		enterByXpathExplict(prop.getProperty("enter.accnumber.xpath"),accno);
 		enterByXpathExplict(prop.getProperty("enter.confirm.accno.xpath"),accno);
-		
-		dropdownSelection(prop.getProperty("click.bene.international.country.xpath"),"Afghanistan");
-		enterByXpathExplict(prop.getProperty("click.inter.city.xpath"),"daman");
-		enterByXpathExplict(prop.getProperty("enter.bank.detail.xpath"),"indian bank");
-		enterByXpathExplict(prop.getProperty("enter.address.xpath"),"abc colony");
+	
+	scrolltoelementJs(prop.getProperty("click.swiftcode.xpath"));
+	dropdownSelectionindex(prop.getProperty("click.bene.international.country.xpath"),country,2);
+//		//clickByXpathExplict(prop.getProperty("click.bene.international.country.xpath"));
+//		//clickByXpathExplict("//li[@class='active-result'][.='Afghanistan']");
+//		enterByXpathExplict(prop.getProperty("click.inter.city.xpath"),"daman");
+//		enterByXpathExplict(prop.getProperty("enter.bank.detail.xpath"),"indian bank");
+//		enterByXpathExplict(prop.getProperty("enter.address.xpath"),"abc colony");
+		scrolltoelementJs(prop.getProperty("click.save.button.xpath"));
 		clickByXpathExplict(prop.getProperty("click.save.button.xpath"));
 	
 Thread.sleep(3000);
-		dropdownSelection(prop.getProperty("select.currency.dropdown.xpath"),currency);
+		//dropdownSelection(prop.getProperty("select.currency.dropdown.xpath"),currency);
 		pageScroll();
 		enterByXpathExplict(prop.getProperty("enter.transactionlimit.xpath"),translimit);
 		enterByXpathExplict(prop.getProperty("enter.daily.limit.xpath"),dailylimit);
