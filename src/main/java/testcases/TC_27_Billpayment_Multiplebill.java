@@ -29,9 +29,9 @@ public class TC_27_Billpayment_Multiplebill  extends ProjectWrapp {
 
 	@Test(groups={"sanity"},dataProvider="fetch")
 
-	public void ownaccount_PayNow(String casename,String GroupID ,String Username,String Password,String Otp,
-			String fromaccno,String corp,String accno,String category,String Biller,String serviceType,
-			String consno,String Remarks,String auth1,String auth2,String timesofpay,String data3,String data4,String data5,String data6,String data7) throws Exception{
+	public void Billpayment(String casename,String GroupID ,String Username,String Password,String Otp,
+			String fromaccno,String corp,String accno,String nickname,String currency,String amount,
+			String Purpose,String auth1,String auth2,String frequency,String timesofpay,String data3,String data4,String data5,String data6,String data7) throws Exception{
 String fromaccnum=regvalue(fromaccno);
 		try{
 		
@@ -50,12 +50,11 @@ String fromaccnum=regvalue(fromaccno);
 .getbalanceamnt()
 .clicktooltip()
 .clickBillPayment_link()
-.clickOneTimepay_link()
-.FillOneTimepayForm(corp, accno, category, Biller, serviceType, consno, Remarks)
-
-.verifysucessmsg()
+.clickBillPaymentInquiry_link()
+.SelectMultipleBill(corp, accno)
+.verifyBillpaysucess()
 .clickPayment_Report_link()
-.OwnPaymentStatusCheck(prop.getProperty("onetimepay.xpath"),"Pending Authorization","Pending Authorization","Today")
+.BillPaymentStatusCheck(prop.getProperty("billpayment.inquiry.xpath"),"Pending Authorization","Pending Authorization","Tomorrow")
 
 .logout(true,usertype);
 
@@ -72,16 +71,16 @@ new	Ajman_HomePage(driver,test)
 //.verifybellicon()
 .clickpaymentMenu()
 .navigatepaymentDateline()
-.datelinefilter("paymentdd.selecttype.xpath","Local Bank Transfer Request","payment.status.xpath","Pending", getrefnumer, "Pending")
+.datelinefilter("paymentdd.selecttype.xpath","BillInquiry and Payment Request","payment.status.xpath","Pending", getrefnumer, "Pending")
 .authorize(auth2)
-.datelinefilter("paymentdd.selecttype.xpath","Local Bank Transfer Request","payment.status.xpath","Accepted", getrefnumer, "Accepted")
+.datelinefilter("paymentdd.selecttype.xpath","BillInquiry and Payment Request","payment.status.xpath","Accepted", getrefnumer, "Accepted")
 .navigatepayreport()
 .clickPayment_Report_link()
 //.PaymentStatus("Own Account Transfer", "Pending Authorization","Pending")
 
 //.OwnPaymentStatus(prop.getProperty("own.acc.payreports.xpath"), "Success","Success","Today")
 
-.OwnPaymentStatusCheck(prop.getProperty("onetimepay.xpath"), "Success","Success","Today")
+.BillPaymentStatusCheck(prop.getProperty("billpayment.inquiry.xpath"), "Success","Success","Tomorrow")
 
 
 .navigateStatementpage()

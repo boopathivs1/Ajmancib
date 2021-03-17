@@ -21,7 +21,7 @@ public class TC_30_AddBene_WithinBank  extends ProjectWrapp {
 		dataSheetName="AjmanCIBPom";
 		category="Sanity";
 		authors="Sreejith";
-		testKeyword="TC31";
+		testKeyword="TC30";
 		LogoutStatus=true;
 		usertype="CIBUser";
 
