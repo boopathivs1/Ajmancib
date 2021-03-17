@@ -28,7 +28,7 @@ public class TC_46_Non_WPS_Payment  extends ProjectWrapp {
 	public void checkAccSummary(String casename,String GroupID ,String Username,String Password,
 			String Otp,String fromcompany,String fromacc,String paymenttype,String filelocation,String auth1,String Data6,String data7,String data8,String data9,String data10,String data11,String data12,String data13,String data14,String data15,String data16) throws Exception{
 
-		filelocation="E:/workspacegit/version 2/GitLabWorkSpace/Clayfin_Automation/AjmanCib/data/non-wps-payment.xls";
+		filelocation="D:/Automation_Workspace/AjmanCIBPom/non-wps-payment.xls";
 		try{
 			
 		new	Ajman_HomePage(driver,test)
