@@ -14,7 +14,7 @@ import wrappers.ProjectWrapp;
 public class TC_30_AddBene_WithinBank  extends ProjectWrapp {
 	@BeforeClass(groups={"common"})
 	public void setDatag() {
-		testCaseName="TC_31_AddBene_WithinBan";
+		testCaseName="TC_30_AddBene_WithinBan";
 
 		testDescription="Add Beneficiary - WithinBan";
 		browserName="Chrome";
