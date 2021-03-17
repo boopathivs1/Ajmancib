@@ -96,8 +96,8 @@ public class ProjectWrapp extends GenericWrappers{
 	//	defaultcontent();
 //logout(LogoutStatus,usertype);	
 		endTestcase();
-//	closeAllBrowsers();
-	//closeBrowser();
+//closeAllBrowsers();
+	closeBrowser();
 //	reportStep("Application has logged out Successfully", "PASS");
 
 	
