@@ -98,13 +98,13 @@ public PaymentReport_Page verifyPaymentStatus(String fromdate,String todate,Stri
 enterByXpathExplict(prop.getProperty("enter.fromdate.paymentreport.xpath"),fromdate);
 enterByXpathExplict(prop.getProperty("enter.todate.paymentreport.xpath"),todate);
 clickByXpathExplict(prop.getProperty("click.payment.report.more.xpath"));
-dropdownSelection(prop.getProperty("click.paystatus.xpath"),status1);
-clickByXpathExplict(prop.getProperty("click.payment.button.filter.xpath"));
-scrolltoelementJs(prop.getProperty("verify.pending.status.record.xpath"));
-VerifyElementPresent(prop.getProperty("verify.pending.status.record.xpath"), "Pending authorization record has been displaying","Pending authorization record has not been displaying");
+//dropdownSelection(prop.getProperty("click.paystatus.xpath"),status1);
+//clickByXpathExplict(prop.getProperty("click.payment.button.filter.xpath"));
+//scrolltoelementJs(prop.getProperty("verify.pending.status.record.xpath"));
+//VerifyElementPresent(prop.getProperty("verify.pending.status.record.xpath"), "Pending authorization record has been displaying","Pending authorization record has not been displaying");
 
 
-clickByXpathExplict(prop.getProperty("click.payment.report.more.xpath"));
+//clickByXpathExplict(prop.getProperty("click.payment.report.more.xpath"));
 
 
 dropdownSelection(prop.getProperty("click.paystatus.xpath"),status2);
